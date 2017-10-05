@@ -2,6 +2,10 @@
 
 <h1>Products</h1>
 
+<p>There are <%= @uniq_num %> unique products.</p>
+<p>The average price of all products is $<%= @avg_price.round(2) %></p>
+<p>The total quantity of stock is <%= @sum_quantity %></p>
+
 <table>
   <thead>
     <tr>

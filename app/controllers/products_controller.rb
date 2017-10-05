@@ -5,6 +5,9 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
+    @uniq_num = Product.count("DISTINCT name")
+    @avg_price = Product.average(:price)
+    @sum_quantity = Product.sum(:stock_quantity)
   end
 
   # GET /products/1
